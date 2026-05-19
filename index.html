@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Radio Rambla Torrenueva</title>
+
+  <style>
+    body {
+      margin: 0;
+      background: #111;
+      color: white;
+      font-family: Arial, sans-serif;
+
+      /* CENTRADO REAL */
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      min-height: 100vh;
+      text-align: center;
+      padding: 20px;
+    }
+
+    h1 {
+      font-size: 1.8rem;
+      margin-bottom: 20px;
+    }
+
+    .radio-player {
+      width: 100%;
+      max-width: 500px; /* límite en desktop */
+    }
+
+    /* hace que el embed no se desborde en móvil */
+    .radio-player iframe,
+    .radio-player div {
+      width: 100% !important;
+    }
+
+    /* móvil */
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 1.4rem;
+      }
+
+      .radio-player {
+        max-width: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>🎵 Radio Rambla Torrenueva</h1>
+
+  <div class="radio-player">
+    <script src="https://embed.radio.co/player/f8ba438.js"></script>
+  </div>
+
+</body>
+</html>
