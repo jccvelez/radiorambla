@@ -1,18 +1,17 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Radio Rambla Torrenueva</title>
 
   <style>
     body {
       margin: 0;
-      background: #111;
+      background: linear-gradient(180deg, #111, #1a1a1a);
       color: white;
       font-family: Arial, sans-serif;
 
-      /* CENTRADO REAL */
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -24,29 +23,69 @@
     }
 
     h1 {
-      font-size: 1.8rem;
-      margin-bottom: 20px;
+      font-size: 2rem;
+      margin-bottom: 25px;
+      letter-spacing: 1px;
     }
 
     .radio-player {
       width: 100%;
-      max-width: 500px; /* límite en desktop */
+      max-width: 500px;
+      background: #1f1f1f;
+      padding: 20px;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.4);
     }
 
-    /* hace que el embed no se desborde en móvil */
     .radio-player iframe,
     .radio-player div {
       width: 100% !important;
     }
 
+    /* LOGOS */
+    .logos {
+      margin-top: 35px;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+      width: 100%;
+      max-width: 500px;
+    }
+
+    .logo-card {
+      background: rgba(255,255,255,0.05);
+      border-radius: 18px;
+      padding: 15px;
+      transition: transform 0.3s ease,
+                  background 0.3s ease;
+      backdrop-filter: blur(6px);
+    }
+
+    .logo-card:hover {
+      transform: translateY(-5px);
+      background: rgba(255,255,255,0.08);
+    }
+
+    .logo-card img {
+      width: 100%;
+      max-height: 120px;
+      object-fit: contain;
+      filter: brightness(1.05);
+    }
+
     /* móvil */
     @media (max-width: 600px) {
+
       h1 {
-        font-size: 1.4rem;
+        font-size: 1.5rem;
       }
 
-      .radio-player {
-        max-width: 100%;
+      .logos {
+        grid-template-columns: 1fr;
+      }
+
+      .logo-card img {
+        max-height: 100px;
       }
     }
   </style>
@@ -58,6 +97,30 @@
 
   <div class="radio-player">
     <script src="https://embed.radio.co/player/f8ba438.js"></script>
+  </div>
+
+  <!-- LOGOS -->
+  <div class="logos">
+
+    
+	 <div class="logo-card">
+      <img src="logo-candil.png" alt="Asociación Cultural El Candil">
+    </div>
+    <div class="logo-card">
+      <img src="logo-juvenil.png" alt="Asociación Juvenil">
+    </div>
+	<div class="logo-card">
+      <img src="logo-ayuntamiento.png" alt="Ayuntamiento Torrenueva">
+    </div>
+	<div class="logo-card">
+      <img src="logo-cultura.png" alt="Cultura Educación y Juventud">
+    </div>
+	
+
+    
+
+   
+
   </div>
 
 </body>
