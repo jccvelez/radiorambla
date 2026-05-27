@@ -20,6 +20,7 @@
       min-height: 100vh;
       text-align: center;
       padding: 20px;
+      box-sizing: border-box;
     }
 
     h1 {
@@ -40,6 +41,29 @@
     .radio-player iframe,
     .radio-player div {
       width: 100% !important;
+    }
+
+    /* BOTÓN PROGRAMAS */
+    .programas-btn {
+      margin-top: 25px;
+    }
+
+    .programas-btn a {
+      display: inline-block;
+      padding: 14px 24px;
+      background: rgba(255,255,255,0.08);
+      color: white;
+      text-decoration: none;
+      border-radius: 16px;
+      font-weight: bold;
+      transition: all 0.3s ease;
+      backdrop-filter: blur(6px);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    }
+
+    .programas-btn a:hover {
+      transform: translateY(-3px);
+      background: rgba(255,255,255,0.12);
     }
 
     /* LOGOS */
@@ -73,6 +97,12 @@
       filter: brightness(1.05);
     }
 
+    footer {
+      margin-top: 35px;
+      color: #777;
+      font-size: 0.9rem;
+    }
+
     /* móvil */
     @media (max-width: 600px) {
 
@@ -87,6 +117,11 @@
       .logo-card img {
         max-height: 100px;
       }
+
+      .programas-btn a {
+        width: 100%;
+        box-sizing: border-box;
+      }
     }
   </style>
 </head>
@@ -99,29 +134,45 @@
     <script src="https://embed.radio.co/player/f8ba438.js"></script>
   </div>
 
+  <!-- BOTÓN PROGRAMAS -->
+  <!--<div class="programas-btn">
+    <a href="programas.html">
+      🎙️ Escuchar programas grabados
+    </a>
+  </div>-->
+
   <!-- LOGOS -->
   <div class="logos">
 
-    
-	 <div class="logo-card">
-      <img src="https://raw.githubusercontent.com/jccvelez/radiorambla/refs/heads/main/logo-candil.png" alt="Asociación Cultural El Candil">
-    </div>
     <div class="logo-card">
-      <img src="https://raw.githubusercontent.com/jccvelez/radiorambla/refs/heads/main/logo-juvenil.png" alt="Asociación Juvenil">
+      <img loading="lazy"
+           src="https://raw.githubusercontent.com/jccvelez/radiorambla/refs/heads/main/logo-candil.png"
+           alt="Asociación Cultural El Candil">
     </div>
-	<div class="logo-card">
-      <img src="https://raw.githubusercontent.com/jccvelez/radiorambla/refs/heads/main/logo-ayuntamiento.png" alt="Ayuntamiento Torrenueva">
-    </div>
-	<div class="logo-card">
-      <img src="https://raw.githubusercontent.com/jccvelez/radiorambla/refs/heads/main/logo-cultura.png" alt="Cultura Educación y Juventud">
-    </div>
-	
 
-    
+    <div class="logo-card">
+      <img loading="lazy"
+           src="https://raw.githubusercontent.com/jccvelez/radiorambla/refs/heads/main/logo-juvenil.png"
+           alt="Asociación Juvenil">
+    </div>
 
-   
+    <div class="logo-card">
+      <img loading="lazy"
+           src="https://raw.githubusercontent.com/jccvelez/radiorambla/refs/heads/main/logo-ayuntamiento.png"
+           alt="Ayuntamiento Torrenueva">
+    </div>
+
+    <div class="logo-card">
+      <img loading="lazy"
+           src="https://raw.githubusercontent.com/jccvelez/radiorambla/refs/heads/main/logo-cultura.png"
+           alt="Cultura Educación y Juventud">
+    </div>
 
   </div>
+
+  <footer>
+    © 2026 Radio Rambla Torrenueva
+  </footer>
 
 </body>
 </html>
