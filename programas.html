@@ -25,7 +25,30 @@
 
     .subtitle {
       color: #ccc;
+      margin-bottom: 25px;
+    }
+
+    /* BOTÓN VOLVER */
+    .volver-btn {
       margin-bottom: 35px;
+    }
+
+    .volver-btn a {
+      display: inline-block;
+      padding: 14px 24px;
+      background: rgba(255,255,255,0.08);
+      color: white;
+      text-decoration: none;
+      border-radius: 16px;
+      font-weight: bold;
+      transition: all 0.3s ease;
+      backdrop-filter: blur(6px);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    }
+
+    .volver-btn a:hover {
+      transform: translateY(-3px);
+      background: rgba(255,255,255,0.12);
     }
 
     .container {
@@ -55,15 +78,10 @@
       font-size: 1.3rem;
     }
 
-    .date {
-      color: #aaa;
-      margin-bottom: 15px;
-      font-size: 0.95rem;
-    }
-
     audio {
       width: 100%;
       border-radius: 10px;
+      margin-top: 10px;
     }
 
     /* LOGOS */
@@ -123,6 +141,11 @@
       .audio-card {
         padding: 15px;
       }
+
+      .volver-btn a {
+        width: 100%;
+        box-sizing: border-box;
+      }
     }
   </style>
 </head>
@@ -130,33 +153,40 @@
 <body>
 
   <h1>🎙️ Programas Grabados</h1>
-  <div class="subtitle">Escucha los programas del día que quieras</div>
+
+  <div class="subtitle">
+    Escucha los programas del día que quieras
+  </div>
+
+  <!-- BOTÓN VOLVER -->
+  <div class="volver-btn">
+    <a href="index.html">
+      🔴 Volver a la radio en directo
+    </a>
+  </div>
 
   <div class="container">
 
-    <!--<div class="audio-card">
-      <h2>26 Mayo 2026</h2>
-      <audio controls>
-        <source src="audios/programa-2026-05-26.mp3" type="audio/mpeg">
-        Tu navegador no soporta audio HTML5.
-      </audio>
-    </div>
+    <!-- PROGRAMA -->
+    <div class="audio-card">
+      <h2>Miércoles, 27 de Mayo de 2026</h2>
 
-    <div class="audio-card">
-      <h2>25 Mayo 2026</h2>
-      <audio controls>
-        <source src="audios/especial-2026-05-25.mp3" type="audio/mpeg">
-        Tu navegador no soporta audio HTML5.
-      </audio>
-    </div>
--->
-    <div class="audio-card">
-      <h2>Miércoles, 26 de Mayo de 2026</h2>
-      <audio controls>
+      <audio controls preload="none">
         <source src="https://my.hidrive.com/api/sharelink/download?id=OHSwXKJXm" type="audio/mpeg">
         Tu navegador no soporta audio HTML5.
       </audio>
     </div>
+
+    <!-- EJEMPLO PARA AÑADIR MÁS -->
+    <!--
+    <div class="audio-card">
+      <h2>25 Mayo 2026</h2>
+
+      <audio controls preload="none">
+        <source src="ENLACE_MP3" type="audio/mpeg">
+      </audio>
+    </div>
+    -->
 
   </div>
 
@@ -164,19 +194,27 @@
   <div class="logos">
 
     <div class="logo-card">
-      <img src="https://raw.githubusercontent.com/jccvelez/radiorambla/refs/heads/main/logo-candil.png" alt="Asociación Cultural El Candil">
+      <img loading="lazy"
+           src="https://raw.githubusercontent.com/jccvelez/radiorambla/refs/heads/main/logo-candil.png"
+           alt="Asociación Cultural El Candil">
     </div>
 
     <div class="logo-card">
-      <img src="https://raw.githubusercontent.com/jccvelez/radiorambla/refs/heads/main/logo-juvenil.png" alt="Asociación Juvenil">
+      <img loading="lazy"
+           src="https://raw.githubusercontent.com/jccvelez/radiorambla/refs/heads/main/logo-juvenil.png"
+           alt="Asociación Juvenil">
     </div>
 
     <div class="logo-card">
-      <img src="https://raw.githubusercontent.com/jccvelez/radiorambla/refs/heads/main/logo-ayuntamiento.png" alt="Ayuntamiento Torrenueva">
+      <img loading="lazy"
+           src="https://raw.githubusercontent.com/jccvelez/radiorambla/refs/heads/main/logo-ayuntamiento.png"
+           alt="Ayuntamiento Torrenueva">
     </div>
 
     <div class="logo-card">
-      <img src="https://raw.githubusercontent.com/jccvelez/radiorambla/refs/heads/main/logo-cultura.png" alt="Cultura Educación y Juventud">
+      <img loading="lazy"
+           src="https://raw.githubusercontent.com/jccvelez/radiorambla/refs/heads/main/logo-cultura.png"
+           alt="Cultura Educación y Juventud">
     </div>
 
   </div>
