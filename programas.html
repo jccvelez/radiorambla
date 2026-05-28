@@ -148,6 +148,20 @@
       }
     }
   </style>
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-L6FDPGEJZZ"></script>
+
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag(){
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-L6FDPGEJZZ');
+  </script>
 </head>
 
 <body>
@@ -171,15 +185,25 @@
    <!-- <div class="audio-card">
       <h2>Jueves, 28 de Mayo de 2026</h2>
 
-      <audio controls preload="none">
-        <source src="https://my.hidrive.com/api/sharelink/download?id=OHSwXKJXm" type="audio/mpeg">
+      <audio controls
+       preload="none"
+       onplay="gtag('event', 'play_programa', {
+         'event_category': 'audio',
+         'event_label': '28 Mayo 2026'
+       })">
+        <source src="https://my.hidrive.com/api/sharelink/download?id=GP73RYMJJ" type="audio/mpeg">
         Tu navegador no soporta audio HTML5.
       </audio>
     </div>-->
     <div class="audio-card">
       <h2>Miércoles, 27 de Mayo de 2026</h2>
 
-      <audio controls preload="none">
+      <audio controls
+       preload="none"
+       onplay="gtag('event', 'play_programa', {
+         'event_category': 'audio',
+         'event_label': '27 Mayo 2026'
+       })">
         <source src="https://my.hidrive.com/api/sharelink/download?id=GP73RYMJJ" type="audio/mpeg">
         Tu navegador no soporta audio HTML5.
       </audio>
