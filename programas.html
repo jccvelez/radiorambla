@@ -86,15 +86,21 @@
 
     /* LOGOS */
     .logos {
-      margin-top: 40px;
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 20px;
-      width: 100%;
-      max-width: 500px;
-      margin-left: auto;
-      margin-right: auto;
-    }
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.logos-row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
 
     .logo-card {
       background: rgba(255,255,255,0.05);
@@ -252,6 +258,7 @@
   <!-- LOGOS -->
   <div class="logos">
 
+  <div class="logos-row">
     <div class="logo-card">
       <img loading="lazy"
            src="https://raw.githubusercontent.com/jccvelez/radiorambla/refs/heads/main/logo-candil.png"
@@ -263,7 +270,9 @@
            src="https://raw.githubusercontent.com/jccvelez/radiorambla/refs/heads/main/logo-juvenil.png"
            alt="Asociación Juvenil">
     </div>
+  </div>
 
+  <div class="logos-row">
     <div class="logo-card">
       <img loading="lazy"
            src="https://raw.githubusercontent.com/jccvelez/radiorambla/refs/heads/main/logo-ayuntamiento.png"
@@ -275,9 +284,9 @@
            src="https://raw.githubusercontent.com/jccvelez/radiorambla/refs/heads/main/logo-cultura.png"
            alt="Cultura Educación y Juventud">
     </div>
-
   </div>
 
+</div>
   <footer>
     © 2026 Radio Rambla Torrenueva
   </footer>
